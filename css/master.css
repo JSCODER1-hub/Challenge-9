@@ -1,0 +1,136 @@
+/* Global Rules */
+:root {
+  --heading: hsl(257, 40%, 49%);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Barlow Semi Condensed, sans-serif;
+}
+body {
+  background-color: #EDF2F8;
+}
+.container {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Start Cards */
+.cards {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+}
+.cards .card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 10px;
+  
+}
+.cards .card .info{
+  font-weight: 500;  
+  flex-basis: 84%;
+  font-size: 13px;
+  margin-bottom:20px ;
+}
+.cards .card .info h2{
+  color:white;
+  font-size: 16px;
+}
+.cards .card .info p{
+  color:hsl(0, 0%, 81% , 100%);
+  font-size: 13px;
+}
+.cards .card img {
+  flex-basis: 12%;
+  border-radius: 50%;
+  width: 40px;
+  height: 50px;
+  border:3px solid hsl(0, 0%, 81% , 50%);
+}
+.cards .card .bold{
+  font-size: 26px;
+  color:white;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.cards .card .light{
+  color: hsl(0, 0%, 83% , 70%);
+  font-size: 13px;
+  
+  line-height: 1.6;
+}
+.cards .card .bold,
+.cards .card .light {
+  flex-basis: 100%;
+}
+.cards .daniel{
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-size: 34%;
+  background-position-x: 220px;
+}
+.cards .jonathan{
+  background-color:hsl(217, 19%, 35%);
+}
+.cards .kira,
+.cards .jeanette{
+  background-color:white;
+  
+}
+.cards .kira .info h2,
+.cards .jeanette .info h2,
+.cards .jeanette .bold,
+.cards .kira .bold
+{
+  color:black;
+}
+.cards .jeanette .light,
+.cards .kira .light{
+  color:rgb(109, 99, 99);
+}
+.cards .patrick{
+  background-color:hsl(219, 29%, 14%);
+}
+@media (min-width:768px)
+{
+  .cards{
+    width:1250px;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    
+    grid-template-rows: repeat(2 , auto);
+  }
+  .cards .card .light{
+    font-size: 21px;
+  }
+  .cards .daniel{
+    grid-column:1 / span 2 ;
+    grid-row: 1 / span 1;
+  }
+  .cards .jonathan{
+    grid-column:3 / span 1 ;
+    grid-row: 1 / span 1;
+  }
+  .cards .kira{
+    grid-column:4 / span 1 ;
+    grid-row: 1 / span 2;
+  }
+  .cards .jeanette{
+    grid-column:1 / span 1 ;
+    grid-row: 2 / span 1;
+  }
+  .cards .patrick{
+    grid-column:2 / span 2 ;
+    grid-row: 2 / span 1;
+  }
+}
+/* End Cards */ ;
